@@ -39,7 +39,6 @@ class PlayerController {
                 guard let playerArray = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: Any]] else { completion(nil); return }
                 let player = Player(playersArray: playerArray)
                 completion(player)
-                print(player)
             } catch {
                 print("Error decoding player: \(error.localizedDescription)")
             }
